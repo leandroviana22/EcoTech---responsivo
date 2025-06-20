@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --branco: #ffffff;
+    --cinza: #333;
+    --verde: #4CAF50;
+}
+
+body{
+    background-color: #f8f9fa;
+    color: var(--cinza);
+    line-height: 1.5;
+}
+
+img{
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 90%;
+    max-width: 68.75em;
+    margin: 0 auto;
+}
+
+.botao{
+    background-color: var(--verde);
+    color: var(--branco);
+    padding: 10px 20px;
+    margin-top: 30px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.cabecario{
+    background-color: var(--branco);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    padding: 15px 0;
+    width: 100%;
+}
+
+.navegacao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--verde);
+}
+
+.botao-menu{
+    display: none;
+}
+
+.menu{
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+.menu a{
+    color: var(--cinza);
+}
+
+section{
+    padding: 2.5em 0;
+}
+
+.destaque{
+    padding-top: 5.625em;
+    background-color: #e9f7f7;
+}
+
+.destaque .container{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.texto h1{
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--cinza);
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.recursos .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Quantas colunas? */
+}
+
+.card{
+    padding: 20px;
+    text-align: center;
+}
+
+.icone{
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.cta{
+    background-color: var(--verde);
+    color: var(--branco);
+    text-align: center;
+}
+
+.btn-comprar{
+    background-color: var(--branco);
+    color: var(--verde);
+}
+
+footer{
+    text-align: center;
+    padding: 15px 0;
+}
+
+@media screen and (max-width: 768px){
+
+    .botao-menu{
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        border: none;
+    }
+
+    .menu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--branco);
+        flex-direction: column;
+        overflow: hidden;
+        transition: 0.3s ease-in-out;
+        max-height: 0;
+        padding-left: 20px;
+    }
+
+    .menu.ativo{
+        max-height: 200px;
+    }
+
+    .destaque .container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .recursos .container{
+        grid-template-columns: 1fr;
+    }
+
+    .cta{
+        padding: 20px;
+    }
+}
