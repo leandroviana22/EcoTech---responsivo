@@ -22,6 +22,7 @@ https://github.com/user-attachments/assets/48667d63-d800-475c-a853-97b2a47e4e55
 - HTML5  
 - CSS3  
   - Media Queries (responsividade)
+- JavaScript
 
 ---
 
